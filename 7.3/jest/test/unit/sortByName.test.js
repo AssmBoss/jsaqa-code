@@ -1,6 +1,19 @@
 const sorting = require("../../app");
 
 describe("Books names test suit", () => {
+  it("Books names shouldn't be sorted", () => {
+    expect(
+      sorting.sortByName([
+        "Властелин Колец",
+        "Властелин Колец",
+        "Властелин Колец",
+      ])
+    ).toEqual([
+        "Властелин Колец",
+        "Властелин Колец",
+        "Властелин Колец",
+    ]);
+  });
   it("Books names should be sorted in ascending order", () => {
     expect(
       sorting.sortByName([
